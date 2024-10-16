@@ -9,15 +9,16 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-let myNFTs = []
+let myNFTs = [];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata,
 // and store it in the variable above.
-function mintNFT(name, value) {
+function mintNFT(name, value, creator) {
     let nft = {
         name: name,
-        value: value
+        value: value,
+        creator: creator
     };
     myNFTs.push(nft);
 }
@@ -26,7 +27,7 @@ function mintNFT(name, value) {
 // and print their metadata with console.log()
 function listNFTs() {
     for (let i = 0; i < myNFTs.length; i++) {
-        console.log("Name: " + myNFTs[i].name + " | Value: " + myNFTs[i].value);
+        console.log("Name: " + myNFTs[i].name + " | Value: " + myNFTs[i].value + " | Creator: " + myNFTs[i].creator);
     }
 }
 
@@ -36,10 +37,10 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("IdoloCoin", 17421);
-mintNFT("MasterCoin", 23847);
-mintNFT("AsoCoin", 52412);
-mintNFT("CatCoin", 72361);
+mintNFT("IdoloCoin", 17421, "Juan");
+mintNFT("MasterCoin", 23847, "Maria");
+mintNFT("AsoCoin", 52412, "Domeng");
+mintNFT("CatCoin", 72361, "Juswa");
 
-listNFTs()
+listNFTs();
 getTotalSupply();
