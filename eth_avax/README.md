@@ -50,31 +50,41 @@ A Solidity smart contract for managing a digital skin marketplace using a custom
 ### Adding Gold Coins
 
 javascript
+
 // Add 1000 gold coins to an account
+
 await skinStore.addGoldCoins(userAddress, 1000);
 
 ### Purchasing a Skin
 
 javascript
+
 // Purchase a single skin
+
 await skinStore.purchaseSkin("Pixel Pioneer");
 
 ### Bulk Purchase
 
 javascript
+
 // Purchase multiple skins at once
+
 await skinStore.bulkPurchase(["Pixel Pioneer", "Digital Drifter"]);
 
 ### Checking Balance
 
 javascript
+
 // Check gold coin balance
+
 const balance = await skinStore.getGoldCoinsBalance(userAddress);
 
 ### Transferring Skins
 
 javascript
+
 // Transfer a skin to another address
+
 await skinStore.transferSkin("Pixel Pioneer", recipientAddress);
 
 ## Events
