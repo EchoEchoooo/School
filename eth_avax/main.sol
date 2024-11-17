@@ -135,3 +135,45 @@ contract SkinStore {
         return goldCoins[account];
     }
 }
+
+javascript
+
+// Add 1000 gold coins to an account
+
+await skinStore.addGoldCoins(userAddress, 1000);
+
+// Purchase a single skin
+
+await skinStore.purchaseSkin("Pixel Pioneer");
+
+// Purchase multiple skins at once
+await skinStore.bulkPurchase(["Pixel Pioneer", "Digital Drifter"]);
+
+// Check gold coin balance
+const balance = await skinStore.getGoldCoinsBalance(userAddress);
+
+// Transfer a skin to another address
+await skinStore.transferSkin("Pixel Pioneer", recipientAddress);
+
+## Events
+
+The contract emits the following events:
+- `GoldCoinsAdded`: When gold coins are added to an account
+- `GoldCoinsSpent`: When gold coins are spent on purchases
+
+## Security Features
+
+- Input validation for all functions
+- Ownership verification for transfers
+- Balance checks before purchases
+- State validation using assertions
+- Custom modifiers for skin name validation
+
+## Requirements
+
+- Solidity ^0.8.18
+- Compatible with EVM-based networks
+
+## License
+
+This project is licensed under the MIT License.
