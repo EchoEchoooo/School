@@ -24,6 +24,7 @@
 ```solidity
 constructor(address initialOwner)
 ```
+
 - Initializes the token with a name and symbol.
 - Sets the initial owner of the contract.
 
@@ -32,6 +33,7 @@ constructor(address initialOwner)
 ```solidity
 function transfer(address _to, uint256 _value) public override returns (bool)
 ```
+
 - Allows users to transfer tokens to another address.
 - Returns `true` if the transfer is successful.
 
@@ -40,6 +42,7 @@ function transfer(address _to, uint256 _value) public override returns (bool)
 ```solidity
 function mint(address to, uint256 amount) public onlyOwner
 ```
+
 - Allows the owner to mint new tokens to a specified address.
 
 ### Burn
@@ -52,6 +55,34 @@ Inherits the burn functionality from `ERC20Burnable`, allowing users to burn the
 2. **Mint Tokens**: The owner can mint tokens by calling the `mint` function.
 3. **Transfer Tokens**: Users can transfer tokens using the `transfer` function.
 4. **Burn Tokens**: Users can burn their tokens to reduce the total supply.
+
+## Using the Program
+
+To interact with the `IdoloCoin` smart contract, follow these steps:
+
+1. **Set Up Your Environment**:
+
+   - Ensure you have a development environment set up with tools like [Truffle](https://www.trufflesuite.com/truffle) or [Hardhat](https://hardhat.org/).
+   - Install the necessary dependencies, including OpenZeppelin contracts.
+
+2. **Deploy the Contract**:
+
+   - Write a deployment script that specifies the initial owner's address.
+   - Use the command line to deploy the contract to your desired Ethereum network.
+
+3. **Mint Tokens**:
+
+   - Call the `mint` function from the owner's account to create new tokens.
+   - Example: `idoloCoin.mint("recipient_address", amount);`
+
+4. **Transfer Tokens**:
+
+   - Any user can call the `transfer` function to send tokens to another address.
+   - Example: `idoloCoin.transfer("recipient_address", amount);`
+
+5. **Burn Tokens**:
+   - Users can call the `burn` function to destroy their tokens.
+   - Example: `idoloCoin.burn(amount);`
 
 ## License
 
