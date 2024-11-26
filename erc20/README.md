@@ -1,8 +1,8 @@
-# IdoloCoin (IDC) Smart Contract
+# PokeCoin (PKC) Smart Contract
 
 ## Overview
 
-`IdoloCoin` is an ERC20 token smart contract built on the Ethereum blockchain. It allows for the creation, transfer, and burning of tokens. The contract is designed to ensure that only the owner can mint new tokens, while any user can transfer and burn their tokens.
+`PokeCoin` is an ERC20 token smart contract built on the Ethereum blockchain. It allows for the creation, transfer, and burning of tokens. The contract is designed to ensure that only the owner can mint new tokens, while any user can transfer and burn their tokens.
 
 ## Features
 
@@ -13,8 +13,8 @@
 
 ## Contract Details
 
-- **Token Name**: IdoloCoin
-- **Token Symbol**: IDC
+- **Token Name**: PokeCoin
+- **Token Symbol**: PKC
 - **Owner**: The address that deploys the contract is set as the initial owner.
 
 ## Functions
@@ -51,14 +51,14 @@ Inherits the burn functionality from `ERC20Burnable`, allowing users to burn the
 
 ## Usage
 
-1. **Deploy the Contract**: Deploy the `IdoloCoin` contract with the address of the initial owner.
+1. **Deploy the Contract**: Deploy the `PokeCoin` contract with the address of the initial owner.
 2. **Mint Tokens**: The owner can mint tokens by calling the `mint` function.
 3. **Transfer Tokens**: Users can transfer tokens using the `transfer` function.
 4. **Burn Tokens**: Users can burn their tokens to reduce the total supply.
 
 ## Using the Program
 
-To interact with the `IdoloCoin` smart contract, follow these steps:
+To interact with the `PokeCoin` smart contract, follow these steps:
 
 1. **Set Up Your Environment**:
 
@@ -73,16 +73,16 @@ To interact with the `IdoloCoin` smart contract, follow these steps:
 3. **Mint Tokens**:
 
    - Call the `mint` function from the owner's account to create new tokens.
-   - Example: `idoloCoin.mint("recipient_address", amount);`
+   - Example: `pokeCoin.mint("recipient_address", amount);`
 
 4. **Transfer Tokens**:
 
    - Any user can call the `transfer` function to send tokens to another address.
-   - Example: `idoloCoin.transfer("recipient_address", amount);`
+   - Example: `pokeCoin.transfer("recipient_address", amount);`
 
 5. **Burn Tokens**:
    - Users can call the `burn` function to destroy their tokens.
-   - Example: `idoloCoin.burn(amount);`
+   - Example: `pokeCoin.burn(amount);`
 
 ## License
 
