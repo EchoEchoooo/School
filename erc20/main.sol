@@ -9,9 +9,9 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 // Any user can transfer tokens
 // Any user can burn tokens
 
-contract IdoloCoin is ERC20, ERC20Burnable, Ownable {
+contract PokeCoin is ERC20, ERC20Burnable, Ownable {
     constructor(address initialOwner) 
-        ERC20("IdoloCoin", "IDC")
+        ERC20("PokeCoin", "PKC")
         Ownable(initialOwner)
     {}
 
