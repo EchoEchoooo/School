@@ -10,14 +10,9 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 // Any user can burn tokens
 
 contract PokeCoin is ERC20, ERC20Burnable, Ownable {
-    constructor(
-        address initialOwner
-    ) ERC20("PokeCoin", "PKC") Ownable(initialOwner) {}
+    constructor(address initialOwner) ERC20("PokeCoin", "PKC") Ownable(initialOwner) {}
 
-    function transfer(
-        address _to,
-        uint256 _value
-    ) public override returns (bool) {
+    function transfer(address _to,uint256 _value) public override returns (bool) {
         _transfer(msg.sender, _to, _value);
         return true;
     }
