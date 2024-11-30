@@ -57,6 +57,14 @@ This project implements a Pokémon Card smart contract in Solidity, where users 
 
 5. Connect your MetaMask wallet and interact with the Pokémon Card app to buy cards and view your collection.
 
+### Card Purchase Costs
+
+- **Common Card**: 5 Gold Coins
+- **Uncommon Card**: 7 Gold Coins
+- **Rare Card**: 10 Gold Coins
+- **Rare Holo Card**: 15 Gold Coins
+- **Pokémon EX Card**: 20 Gold Coins
+
 ## Help
 
 If you encounter issues with the project, consider the following steps:
